@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "ClickCart Backend API",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +9,8 @@
     "dev": "nodemon server.js"
   },
   "type": "module",
-  "keywords": [],
-  "author": "",
+  "keywords": ["ecommerce", "api", "backend"],
+  "author": "ClickCart Team",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.3",
@@ -22,5 +22,9 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }
