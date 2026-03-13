@@ -66,4 +66,11 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+// For Render deployment
+if (process.env.RENDER || process.env.NODE_ENV === 'production') {
+  app.listen(PORT || 10000, () => {
+    console.log(`Server is running on port ${PORT || 10000}`);    
+  });
+}
+
 export default app;

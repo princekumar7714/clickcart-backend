@@ -2,15 +2,20 @@ services:
   - type: web
     name: clickcart-backend
     env: node
+    rootDir: ./backend
     buildCommand: npm install
     startCommand: npm start
+    plan: free
     envVars:
       - key: NODE_ENV
         value: production
       - key: MONGO_URI
-        sync: false
+        value: mongodb+srv://prince:prince123@cluster0.bb7ywa1.mongodb.net/clickcart
       - key: JWT_SECRET
-        sync: false
+        value: your-super-secret-jwt-key-here
       - key: DB_NAME
         value: clickcart
+      - key: PORT
+        value: 10000
     autoDeploy: true
+    healthCheckPath: /health
